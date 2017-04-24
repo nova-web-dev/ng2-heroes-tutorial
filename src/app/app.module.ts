@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
  ============================================================================*/
 import { HeroDetailComponent } from './hero-detail.component';
 import { AppComponent }  from './app.component';
-import { Navbar } from './navbar.component';
+import { Navbar } from './navbar/navbar.component';
 
 
 @NgModule({
