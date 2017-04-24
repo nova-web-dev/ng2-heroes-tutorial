@@ -20,6 +20,7 @@ const HEROES: Hero[] = [
 @Component({
     selector: 'my-app',
     template: `
+        <cs-navbar>Loading navbar...</cs-navbar>
         <h1>{{title}}</h1>
         <h2>My Heroes</h2>
         <ul class="heroes">
@@ -88,9 +89,6 @@ export class AppComponent  {
     heroes = HEROES;
     onSelect(hero: Hero): void {
         this.selectedHero = hero;
-    }
-    clearHero(){
-        this.selectedHero = undefined;
     }
 }
 
