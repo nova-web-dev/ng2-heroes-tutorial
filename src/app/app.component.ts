@@ -19,7 +19,8 @@ import { OnInit } from '@angular/core';
                 
             </router-outlet>
         </div>
-    `
+    `,
+    styleUrls: ['./app.component.css']
 })
 
 
