@@ -1,0 +1,10 @@
+<div *ngIf="fisher">
+    <h2>{{fisher.FirstName}} details!</h2>
+    <h3>{{fisher.LastName}} details!</h3>
+    <div><label>id: </label>{{fisher.Id}}</div>
+
+    <img src={{fisher.image_url__c}} />
+
+    <!-- REMOVE/DISABLE LATER -->
+    <button class="btn btn-default" (click)="goBack()">Home Page</button>
+</div>

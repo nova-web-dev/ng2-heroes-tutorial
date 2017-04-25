@@ -8,10 +8,15 @@ import { RouterModule } from '@angular/router';
  ============================================================================*/
 import { AppComponent }  from './app.component';
 import { Navbar } from './components/navbar/navbar.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
-import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroService } from './services/hero.service';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+import { HttpModule } from '@angular/http';
+
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FisherService } from './services/fisher.service';
+
+import { HomeComponent } from './components/home/home.component';
+import { FisherDetailComponent } from './components/fisher-detail.component';
 
 
 
@@ -21,29 +26,30 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
         FormsModule,
         RouterModule.forRoot([
             {
-                path: 'heroes',
-                component: HeroesComponent
-            },
-            {
-                path: 'dashboard',
-                component: DashboardComponent
+                path: 'home',
+                component: HomeComponent
             },
             {
                 path: '',
-                redirectTo: '/dashboard',
+                redirectTo: '/home',
                 pathMatch: 'full'
+            },
+            {
+                path: 'fisher/:id',
+                component: FisherDetailComponent
             }
-        ])
+        ]),
+        HttpModule,
+        // InMemoryWebApiModule.forRoot(FisherService)
     ],
     declarations: [
         AppComponent,
-        HeroDetailComponent,
+        FisherDetailComponent,
         Navbar,
-        HeroesComponent,
-        DashboardComponent
+        HomeComponent
     ],
     providers: [
-        HeroService
+        FisherService
     ],
     bootstrap:    [ AppComponent ]
 })

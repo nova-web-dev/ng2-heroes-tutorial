@@ -7,19 +7,27 @@ import { OnInit } from '@angular/core';
 @Component({
     selector: 'my-app',
     template: `
-        <cs-navbar>Loading navbar...</cs-navbar>
+        <div id="container">
+            <div id="head">
+                <h2>
+                    LOGO
+                </h2>
+            </div>            
+            <div id="body">
+                <router-outlet>
+
+                </router-outlet>
+            </div>
+            <div id="footer">
+                <h1>
+                    TODO
+                </h1>
+            </div>
+        </div> 
         
-        <div class="container">
-            <h1>{{title}}</h1>
-            <!--<nav>-->
-                <button class="btn btn-default" routerLink="/dashboard">Show Dashboard</button>
-                <button class="btn btn-default" routerLink="/heroes">Show Heroes</button>
-            <!--</nav>-->
-            <router-outlet>
-                
-            </router-outlet>
-        </div>
-    `
+        
+    `,
+    styleUrls: ['./app.css']
 })
 
 
