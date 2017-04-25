@@ -12,8 +12,8 @@ import { OnInit } from '@angular/core';
         <div class="container">
             <h1>{{title}}</h1>
             <!--<nav>-->
-                <button class="btn btn-default" routerLink="/dashboard">Show Dashboard</button>
-                <button class="btn btn-default" routerLink="/heroes">Show Heroes</button>
+                <button class="btn btn-default" routerLink="/dashboard" routerLinkActive="active">Show Dashboard</button>
+                <button class="btn btn-default" routerLink="/heroes" routerLinkActive="active">Show Heroes</button>
             <!--</nav>-->
             <router-outlet>
                 
