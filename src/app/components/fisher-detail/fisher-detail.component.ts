@@ -7,8 +7,8 @@ import { Location } from '@angular/common';
 
 import 'rxjs/add/operator/switchMap';
 
-import { Fisher } from '../objects/fisher';
-import {FisherService} from '../services/fisher.service';
+import { Fisher } from '../../objects/fisher';
+import {FisherService} from '../../services/fisher.service';
 
 @Component({
     selector: 'fisher-detail',

@@ -16,7 +16,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FisherService } from './services/fisher.service';
 
 import { HomeComponent } from './components/home/home.component';
-import { FisherDetailComponent } from './components/fisher-detail.component';
+import { FisherDetailComponent } from './components/fisher-detail/fisher-detail.component';
 
 
 
