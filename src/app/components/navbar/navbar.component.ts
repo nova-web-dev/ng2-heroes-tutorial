@@ -11,7 +11,7 @@ import { OnInit } from '@angular/core';
 export class Navbar implements OnInit {
     ngOnInit(): void {
         $(document).ready(function(){
-            alert('This is a test!');
+            // alert('This is a test!');
         });
     }
 

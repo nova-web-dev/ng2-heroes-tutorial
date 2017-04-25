@@ -2,7 +2,7 @@
  * Created by Carl on 2017-04-21.
  */
 import { Component, Input } from '@angular/core';
-import { Hero } from './hero';
+import { Hero } from '../../objects/hero';
 
 @Component({
     selector: 'hero-detail',
