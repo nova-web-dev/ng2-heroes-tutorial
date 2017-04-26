@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import {Http} from "@angular/http";
+import { Http } from "@angular/http";
 
 import { Fisher } from '../objects/fisher';
 
@@ -8,11 +8,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 
-export class FisherService implements InMemoryDbService {
-    createDb(): {} {
-        return undefined;
-    }
-
+export class FisherService {
     private serverURL = 'http://197.85.186.65:8080/abalobi-users';
 
     constructor(private http: Http) { }

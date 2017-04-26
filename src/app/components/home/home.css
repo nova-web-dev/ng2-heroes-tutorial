@@ -14,3 +14,7 @@
     display: flex;
     align-items: center;
 }
+
+.cs-centered{
+    margin-top: 40vh;
+}
