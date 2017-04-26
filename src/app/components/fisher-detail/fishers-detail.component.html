@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div *ngIf="fisher" class="container">
+    <div *ngIf="fisher" class="container animated fadeInRight">
 
         <div class="row cs-info-row  card card-2">
             <h1 class="text-center">
@@ -53,16 +53,13 @@
             </h1>
             <div class="col-md-6 cs-grid-margin ">
                 <!--Community Info-->
-
-                <div class="text-center">
-
-                </div>
+                <sebm-google-map [latitude]="lat" [longitude]="lng" [disableDefaultUI]="true">
+                    <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+                </sebm-google-map>
             </div>
             <div class="col-md-6 cs-grid-margin">
                 <!--Community Map-->
-                <!--<sebm-google-map [latitude]="lat" [longitude]="lng" [disableDefaultUI]="true">-->
-                    <!--<sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>-->
-                <!--</sebm-google-map>-->
+
                 {{lorem}}
             </div>
         </div>
