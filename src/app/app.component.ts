@@ -7,21 +7,7 @@ import { OnInit } from '@angular/core';
 @Component({
     selector: 'my-app',
     template: `
-        <div id="container">
-            <div id="head">
-                <h1 class="web-header">Abalobi Hook2Cook</h1>
-            </div>            
-            <div id="body">
-                <router-outlet>
-
-                </router-outlet>
-            </div>
-            <div id="footer">
-                <h1>
-                    
-                </h1>
-            </div>
-        </div>        
+        <router-outlet></router-outlet>     
     `,
     styleUrls: ['./app.css']
 })

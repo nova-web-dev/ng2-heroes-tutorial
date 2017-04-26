@@ -18,3 +18,25 @@
 .cs-centered{
     margin-top: 35vh;
 }
+
+.cs-main-banner{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/mainBackground.jpg");
+    background-size: cover;
+}
+
+.cs-main-content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+
+}
+
+.cs-main-spacer{
+    width: 100%;
+    height: 45vh;
+}

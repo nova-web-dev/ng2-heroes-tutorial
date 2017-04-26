@@ -45,6 +45,7 @@ export class FisherDetailComponent {
 
         this.lat = fisher.community_lat;
         this.lng = fisher.community_lon;
+
     }
 
     goBack(): void {

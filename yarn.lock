@@ -115,6 +115,10 @@ angular-in-memory-web-api@~0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/angular-in-memory-web-api/-/angular-in-memory-web-api-0.3.1.tgz#3b2fe5965c3183df32081c2874ac113a827e86e3"
 
+angular2-google-maps@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/angular2-google-maps/-/angular2-google-maps-0.17.0.tgz#ad8366fa4e5c56de0b8b20f003b5f7a1da06ffe3"
+
 ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-0.2.1.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"

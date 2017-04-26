@@ -1,19 +1,27 @@
-<div class="container-fluid cs-centered">
-    <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-            <form class="form-inline">
-                <div class="row">
-                    <div class="col-md-9">
-                        <input name="id" style="width: 100%;" class="form-control col-md-10" type="search" placeholder="Search..." [(ngModel)]="catchId"/>
-                    </div>
-                    <div class="col-md-3">
-                        <button type="submit" style="width: 100%;" class="btn btn-default form-control col-md-2" (click)="searchFisher()">Search</button>
-                    </div>
-                </div>
+<div class="cs-main-banner">
+    <div class="cs-main-content">
+        <div class="cs-main-spacer">
 
-            </form>
         </div>
-        <div class="col-md-3"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <input name="id" style="width: 100%; margin-bottom: 15px;" class="form-control col-md-10" type="search" placeholder="Search..." [(ngModel)]="catchId"/>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" style="width: 100%; margin-bottom: 15px;" class="btn btn-default form-control col-md-2" (click)="searchFisher()">Search</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+
     </div>
 </div>
