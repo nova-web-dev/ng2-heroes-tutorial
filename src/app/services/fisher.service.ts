@@ -9,23 +9,19 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 
 export class FisherService {
-    private serverURL = 'http://197.85.186.65:8080/abalobi-users';
+    private serverURL = 'http://197.85.186.65:8080/catch-tag/';
 
     constructor(private http: Http) { }
 
-    // getFishers(): Promise<Fisher[]> {
-    //     return this.http.get(this.serverURL).toPromise().then(response => response.json().data as Fisher[]).catch(this.handleError);
-    // }
-
     getFisher(id: string): Promise<Fisher> {
-        const url = `${this.serverURL}/${id}`;
+        const url = `${this.serverURL}?Id=${id}`;
 
         console.log('Request ID ' + id);
         console.log('Full request URL ' + url);
 
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json()['abalobi-users'][0] as Fisher)
+            .then(response => response.json()['catch-data'] as Fisher)
             .catch(this.handleError);
     }
 

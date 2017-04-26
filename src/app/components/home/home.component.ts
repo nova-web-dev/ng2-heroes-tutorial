@@ -12,13 +12,13 @@ import { Router } from '@angular/router';
 
 export class HomeComponent {
 
-    str: string = '';
+    catchId: string = '';
 
     constructor(private router: Router) { }
 
     searchFisher(): void {
-        console.log('Text in search box = ' + this.str);
+        console.log('Text in search box = ' + this.catchId);
 
-        this.router.navigateByUrl('/fisher/' + this.str).then((url) => console.log('Promise completed for navigation to url'));
+        this.router.navigateByUrl('/fisher/' + this.catchId).then((url) => console.log('Promise completed for navigation to url'));
     }
 }

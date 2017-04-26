@@ -10,14 +10,12 @@ import { AppComponent }  from './app.component';
 import { Navbar } from './components/navbar/navbar.component';
 
 import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
-// Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FisherService } from './services/fisher.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { FisherDetailComponent } from './components/fisher-detail/fisher-detail.component';
-
 
 
 @NgModule({
@@ -40,7 +38,9 @@ import { FisherDetailComponent } from './components/fisher-detail/fisher-detail.
             }
         ]),
         HttpModule,
-        // InMemoryWebApiModule.forRoot(FisherService)
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyAcz8IeL7WdlcyARuUr44RTXc9vZphRkqI'
+        })
     ],
     declarations: [
         AppComponent,

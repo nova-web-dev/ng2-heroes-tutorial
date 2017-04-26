@@ -13,13 +13,17 @@ import {FisherService} from '../../services/fisher.service';
 
 @Component({
     selector: 'fisher-detail',
-    templateUrl: './fishers-detail.component.html'
+    templateUrl: './fishers-detail.component.html',
+    styleUrls: ['./fisher-detail.css']
 })
 
 
 
 export class FisherDetailComponent {
     fisher: Fisher;
+
+    lat: number;
+    lng: number;
 
     constructor(
         private fisherService: FisherService,
@@ -31,14 +35,19 @@ export class FisherDetailComponent {
     ngOnInit(): void {
         this.route.params
             .switchMap((params: Params) => this.fisherService.getFisher(params['id']))
-            .subscribe(fisher => this.fisher = fisher, () => this.router.navigateByUrl("/home"));
+            .subscribe(fisher => this.setValues(fisher), () => this.router.navigateByUrl("/home"));
+    }
+
+    setValues(fisher: Fisher) {
+        console.log(fisher);
+
+        this.fisher = fisher;
+
+        this.lat = fisher.community_lat;
+        this.lng = fisher.community_lon;
     }
 
     goBack(): void {
         this.location.back();
-    }
-
-    getThis(){
-        return this;
     }
 }

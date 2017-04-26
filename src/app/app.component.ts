@@ -9,9 +9,7 @@ import { OnInit } from '@angular/core';
     template: `
         <div id="container">
             <div id="head">
-                <h2>
-                    LOGO
-                </h2>
+                <h1 class="web-header">Abalobi Hook2Cook</h1>
             </div>            
             <div id="body">
                 <router-outlet>
@@ -20,17 +18,15 @@ import { OnInit } from '@angular/core';
             </div>
             <div id="footer">
                 <h1>
-                    TODO
+                    
                 </h1>
             </div>
-        </div> 
-        
-        
+        </div>        
     `,
     styleUrls: ['./app.css']
 })
 
 
 export class AppComponent {
-    title = 'Tour of Heroes';
+
 }
