@@ -9,6 +9,13 @@
 /*.secondary-text-color  { color: #757575; }*/
 /*.divider-color         { border-color: #BDBDBD; }*/
 
+.fisher-main-banner{
+    /*position: relative;*/
+    /*width: 100vw;*/
+    min-height: 100vh;
+    background-image: url("../../../images/mainBackground.jpg");
+    background-size: cover;
+}
 
 .cs-centered{
     margin-top: 35vh;
