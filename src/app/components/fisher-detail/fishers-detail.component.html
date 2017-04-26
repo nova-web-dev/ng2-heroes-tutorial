@@ -1,87 +1,80 @@
-<div class="container-fluid">
-    <div *ngIf="fisher">
-        <!-- Header -->
-        <div class="row padding dark-primary-color">
-            <div class="col-xs-4"></div>
-            <div class="col-xs-4">
-                <h3 id="header" class="primary-text-color">
-                    Catch {{fisher.id}} Details!!
-                </h3>
-                <div class="divider-color" style="height: 1px; border: 1px solid; width: 95%; margin: 10px 0px 10px 0px"></div>
-            </div>
-            <div class="col-xs-4"></div>
-        </div>
+<div *ngIf="fisher" class="">
 
-        <div class="row padding">
-            <div class="col-xs-8 divider-color">
-                <div class="row default-primary-color splitter">
-                    <!-- Fish Details -->
-                    <div class="col-xs-3">
-                        <img class="profile-pic" src="https://cdn.pixabay.com/photo/2012/04/12/22/04/goldfish-30837_960_720.png" />
-                    </div>
-                    <div class="col-xs-9">
-                        <div>
-                            <h1 id="species_header" class="primary-text-color">Species</h1>
-                            <p class="text-primary-color">{{fisher.species_name}}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fisher Details -->
-                <div class="row default-primary-color splitter">
-                    <div class="col-xs-3">
-                        <img class="profile-pic" src={{fisher.fisher_image}} />
-                    </div>
-                    <div class="col-xs-9">
-                        <div>
-                            <h1 id="name_header" class="primary-text-color">Name</h1>
-                            <p class="text-primary-color">{{fisher.fisher_name}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xs-1"></div>
-
-            <div class="col-xs-3">
-                <!-- Google Maps -->
-                <div class="row" style="margin-bottom: 20px;">
-                    <sebm-google-map [latitude]="lat" [longitude]="lng" [disableDefaultUI]="true">
-                        <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-                    </sebm-google-map>
-                </div>
-
-                <!-- Community Information -->
-                <div class="row default-primary-color padding">
-                    <div>
-                        <h1 class="primary-text-color">Town</h1>
-                        <p class="wordwrap text-primary-color">{{fisher.community_name}}</p>
-                    </div>
-
-                    <div>
-                        <h1 class="primary-text-color">Information</h1>
-                        <p class="wordwrap text-primary-color">kfksdfljsdjfldsjlfsdlfnsdnfdsknlkfsdfnlksdfkldsjflksdjfsdkjlkdjflkjsdlkfjlsdk</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- REMOVE/DISABLE LATER -->
-        <button class="btn btn-default" (click)="goBack()">Home Page</button>
+    <div class="container-fluid catch-header-bar text-center">
+        <!--<h1>Abalobi Hook to Cook</h1>-->
     </div>
+    <div class="container">
 
-    <div *ngIf="!fisher" class="row cs-centered">
-        <div class="col-xs-4"></div>
-        <div class="col-xs-4 text-center">
-            <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-                <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-            </svg>
-            <h1>
-                Loading...
+        <div class="row cs-info-row">
+            <h1 class="text-center">
+                {{fisher.species_name}}
             </h1>
+            <div class="col-md-4 cs-grid-margin">
+                <!--Species Image-->
+                <div class="text-center">
+                    <img class="cs-column-image" src="https://cdn.pixabay.com/photo/2012/04/12/22/04/goldfish-30837_960_720.png" />
+                </div>
+            </div>
+            <div class="col-md-8 cs-grid-margin">
+                <!--Species Info-->
+
+                {{lorem}}
+
+            </div>
         </div>
-        <div class="col-xs-4"></div>
+        <div class="row cs-info-row">
+            <h1 class="text-center">
+                {{fisher.fisher_name}}
+            </h1>
+            <div class="col-md-4 cs-grid-margin ">
+                <!--Fisher Image-->
+                <div class="text-center">
+                    <img class="cs-column-image" src={{fisher.fisher_image}} />
+                </div>
+            </div>
+            <div class="col-md-8 cs-grid-margin">
+                <!--Fisher Info-->
+
+                {{lorem}}
+            </div>
+        </div>
+        <div class="row cs-info-row">
+            <h1 class="text-center">
+                {{fisher.community_name}}
+            </h1>
+            <div class="col-md-6 cs-grid-margin ">
+                <!--Community Info-->
+
+                <div class="text-center">
+
+                </div>
+            </div>
+            <div class="col-md-6 cs-grid-margin">
+                <!--Community Map-->
+                <!--<sebm-google-map [latitude]="lat" [longitude]="lng" [disableDefaultUI]="true">-->
+                    <!--<sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>-->
+                <!--</sebm-google-map>-->
+                {{lorem}}
+            </div>
+        </div>
+
+        <div class="container">
+            <button class="btn btn-default" (click)="goBack()">Home Page</button>
+        </div>
     </div>
+
 </div>
 
+<div *ngIf="!fisher" class="row cs-centered">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4 text-center">
+        <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+        </svg>
+        <h1>
+            Loading...
+        </h1>
+    </div>
+    <div class="col-xs-4"></div>
+</div>
 

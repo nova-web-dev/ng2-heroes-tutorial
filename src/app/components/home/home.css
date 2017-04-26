@@ -22,8 +22,8 @@
 .cs-main-banner{
     position: relative;
     width: 100vw;
-    height: 100vh;
-    background-image: url("images/mainBackground.jpg");
+    min-height: 100vh;
+    background-image: url("../../../images/mainBackground.jpg");
     background-size: cover;
 }
 
@@ -33,7 +33,6 @@
     bottom: 0;
     right: 0;
     top: 0;
-
 }
 
 .cs-main-spacer{
