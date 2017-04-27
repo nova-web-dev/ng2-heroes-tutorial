@@ -12,10 +12,10 @@ import { Navbar } from './components/navbar/navbar.component';
 import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
-import { FisherService } from './services/fisher.service';
+import { CatchService } from './services/catch.service';
 
 import { HomeComponent } from './components/home/home.component';
-import { FisherDetailComponent } from './components/fisher-detail/fisher-detail.component';
+import { CatchDetailComponent } from './components/catch-detail/catch-detail.component';
 
 
 @NgModule({
@@ -28,13 +28,18 @@ import { FisherDetailComponent } from './components/fisher-detail/fisher-detail.
                 component: HomeComponent
             },
             {
+                // Default path
                 path: '',
-                redirectTo: '/home',
+                redirectTo: 'catch/tag/',
                 pathMatch: 'full'
             },
             {
-                path: 'fisher/:id',
-                component: FisherDetailComponent
+                path: 'catch/tag/',
+                component: CatchDetailComponent
+            },
+            {
+                path: 'catch/tag/:id',
+                component: CatchDetailComponent
             }
         ]),
         HttpModule,
@@ -44,14 +49,14 @@ import { FisherDetailComponent } from './components/fisher-detail/fisher-detail.
     ],
     declarations: [
         AppComponent,
-        FisherDetailComponent,
+        CatchDetailComponent,
         Navbar,
         HomeComponent
     ],
     providers: [
-        FisherService
+        CatchService
     ],
-    bootstrap:    [ AppComponent ]
+    bootstrap: [ AppComponent ]
 })
 
 

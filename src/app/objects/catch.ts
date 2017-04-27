@@ -2,7 +2,7 @@
  * Created by Carl on 2017-04-24.
  */
 
-export class Fisher {
+export class Catch {
     id: string;
     species_name: string;
     fisher_name: string;

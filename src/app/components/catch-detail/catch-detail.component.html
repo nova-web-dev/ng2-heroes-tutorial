@@ -1,10 +1,37 @@
-<div class="fisher-main-banner">
+<div class="catch-main-banner">
 
     <div class="container-fluid catch-header-bar text-center">
         <!--<h1>Abalobi Hook to Cook</h1>-->
     </div>
 
-    <div *ngIf="!fisher" class="cs-centered">
+    <!-- Search bar -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form class="form-inline">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input name="id" style="width: 100%; margin-bottom: 15px;" class="form-control col-md-10" type="search" placeholder="Search for catch id..." [(ngModel)]="searchedCatchId"/>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" style="width: 100%; margin-bottom: 15px;" class="btn btn-default form-control col-md-2" (click)="searchFisher()">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <!-- Error message -->
+    <div *ngIf="showError === true" class="cs-centered">
+        <h1 class="text-center" style="color: white">
+            No catch with catchID {{this.getCatchId()}} exists
+        </h1>
+    </div>
+
+    <div *ngIf="fisher === null && showError === false && noFisher === false" class="cs-centered">
         <div class="text-center">
             <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
@@ -12,8 +39,7 @@
         </div>
     </div>
 
-    <div *ngIf="fisher" class="container animated fadeInRight">
-
+    <div *ngIf="fisher !== null && showError === false" class="container animated fadeInRight">
         <div class="row cs-info-row  card card-2">
             <h1 class="text-center">
                 {{fisher.species_name}}
@@ -36,13 +62,13 @@
                 {{fisher.fisher_name}}
             </h1>
             <div class="col-md-4 cs-grid-margin ">
-                <!--Fisher Image-->
+                Catchsher Image-->
                 <div class="text-center">
                     <img class="cs-column-image" src={{fisher.fisher_image}} />
                 </div>
             </div>
             <div class="col-md-8 cs-grid-margin">
-                <!--Fisher Info-->
+                Catchsher Info-->
 
                 {{lorem}}
             </div>
@@ -64,9 +90,9 @@
             </div>
         </div>
 
-        <div class="container">
-            <button class="btn btn-default" (click)="goBack()">Home Page</button>
-        </div>
+        <!--<div class="container">-->
+            <!--<button class="btn btn-default" (click)="goBack()">Home Page</button>-->
+        <!--</div>-->
     </div>
     <div class="container-fluid catch-header-bar text-center">
         <!--<h1>Abalobi Hook to Cook</h1>-->
